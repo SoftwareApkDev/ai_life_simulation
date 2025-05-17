@@ -67,6 +67,9 @@ def clear():
 # Creating necessary classes.
 
 
+# TODO: add more features into this game (e.g., adventure mode, city tiles, missions, etc)
+
+
 ###########################################
 # GENERAL
 ###########################################
@@ -107,6 +110,8 @@ class Player(GameCharacter):
         GameCharacter.__init__(self, name)
         self.level: int = 1
 
+        # TODO: add more attributes and functions related to the player of this game.
+
 
 class AIPlayer(Player):
     """
@@ -143,7 +148,7 @@ def main() -> int:
     genai.configure(api_key=os.environ['GEMINI_API_KEY'])
 
     # Gemini Generative Model
-    model: GenerativeModel = genai.GenerativeModel("gemini-pro")
+    model: GenerativeModel = genai.GenerativeModel("gemini-2.5-flash-preview-04-17")
 
 
 if __name__ == "__main__":
